@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/layout_tab_1_main"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Tab1">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/slide_show"
+        android:text="Slide Show"
+        android:textAllCaps="false"
+        android:textSize="30sp"
+        />
+
+    <LinearLayout
+        android:id="@+id/linear_layout_tab1"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/relative_layout_1"
+            android:layout_width="match_parent"
+            android:layout_height="400dp">
+
+            <ViewFlipper
+                android:id="@+id/view_flipper_1"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:autoStart="true"
+                android:flipInterval="2000"
+                android:inAnimation="@android:anim/slide_in_left"
+                android:outAnimation="@android:anim/slide_out_right">
+
+
+            </ViewFlipper>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <RelativeLayout
+            android:id="@+id/relative_layout_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ViewFlipper
+                android:id="@+id/view_flipper_2"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:autoStart="true"
+                android:background="@color/colorWhite"
+                android:flipInterval="2000"
+                android:inAnimation="@android:anim/slide_in_left"
+                android:outAnimation="@android:anim/slide_out_right">
+
+
+
+            </ViewFlipper>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/list_view" />
+
+</LinearLayout>
